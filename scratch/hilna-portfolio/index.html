@@ -1,0 +1,586 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hilna O | Computer Science Student & UI/UX Developer</title>
+  <meta name="description" content="Personal portfolio of Hilna - 1st Year B.Tech CSE student at AWH Engineering College, passionate about Python, AI/ML, and Bento-grid UI/UX design.">
+  <meta name="keywords" content="Hilna, Portfolio, Python, AI, ML, UI/UX, Bento Grid, AWH Engineering College, Calicut, Kerala, Developer">
+  <meta name="author" content="Hilna O">
+
+  <!-- Open Graph / Meta for Social Previews -->
+  <meta property="og:title" content="Hilna O | Portfolio">
+  <meta property="og:description" content="1st Year B.Tech CSE student passionate about Python, AI, and intuitive Bento UI design.">
+  <meta property="og:type" content="website">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body data-theme="dark">
+
+  <!-- Floating Background Ambient Glow -->
+  <div class="ambient-glow top-left"></div>
+  <div class="ambient-glow bottom-right"></div>
+
+  <!-- Navigation Bar -->
+  <header class="navbar-wrapper">
+    <nav class="navbar">
+      <a href="#" class="brand-logo">
+        <span class="logo-symbol">&lt;/&gt;</span>
+        <span class="logo-text">Hilna<span class="accent-dot">.</span></span>
+      </a>
+
+      <div class="nav-links" id="navLinks">
+        <a href="#about" class="nav-item">About</a>
+        <a href="#skills" class="nav-item">Skills</a>
+        <a href="#projects" class="nav-item">Projects</a>
+        <a href="#contact" class="nav-item">Contact</a>
+      </div>
+
+      <div class="nav-actions">
+        <!-- 30-sec Recruiter Mode Toggle Button -->
+        <button id="recruiterModeBtn" class="recruiter-badge-btn" title="Quick 30-second summary for recruiters">
+          <i class="fa-solid fa-bolt"></i>
+          <span>30s Scan</span>
+        </button>
+
+        <!-- Theme Toggle -->
+        <button id="themeToggle" class="theme-toggle" aria-label="Toggle light and dark theme">
+          <i class="fa-solid fa-sun sun-icon"></i>
+          <i class="fa-solid fa-moon moon-icon"></i>
+        </button>
+
+        <!-- Mobile Menu Toggle -->
+        <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Open menu">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+      </div>
+    </nav>
+  </header>
+
+  <!-- 30-Second Recruiter Drawer / Modal -->
+  <div id="recruiterModal" class="recruiter-modal hidden">
+    <div class="recruiter-modal-content">
+      <div class="modal-header">
+        <div class="modal-title">
+          <i class="fa-solid fa-bolt text-amber"></i>
+          <h3>Recruiter 30-Second Snapshot</h3>
+        </div>
+        <button id="closeRecruiterModal" class="close-btn">&times;</button>
+      </div>
+      <div class="modal-body">
+        <div class="recruiter-card">
+          <span class="pill-label">Who</span>
+          <p><strong>Hilna O</strong> — 1st Year B.Tech Computer Science Engineering student at <em>AWH Engineering College, Kuttikattoor</em>.</p>
+        </div>
+        <div class="recruiter-card">
+          <span class="pill-label">Core Competencies</span>
+          <p>Python Programming, AI/ML Fundamentals, Clean HTML/CSS, Git/GitHub version control, Scratch game logic & Bento UI/UX design.</p>
+        </div>
+        <div class="recruiter-card">
+          <span class="pill-label">Seeking</span>
+          <p>Open for tech internships, open-source collaborations, mentorship, and junior developer / design opportunities.</p>
+        </div>
+        <div class="modal-footer-actions">
+          <a href="#contact" class="btn btn-primary" onclick="document.getElementById('recruiterModal').classList.add('hidden')">
+            <i class="fa-solid fa-paper-plane"></i> Contact Immediately
+          </a>
+          <button class="btn btn-secondary copy-email-btn" data-email="hilnamanoharan2008@gmail.com">
+            <i class="fa-regular fa-copy"></i> Copy Email
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <main class="main-container">
+
+    <!-- HERO / BANNER SECTION -->
+    <section class="hero-section">
+      <div class="status-pill">
+        <span class="pulsing-dot"></span>
+        <span>1st Year B.Tech CSE • Available for Internships & Projects</span>
+      </div>
+
+      <h1 class="hero-title">
+        Hi, I'm <span class="gradient-text">Hilna</span>.<br>
+        Crafting Python logic & intuitive Bento interfaces.
+      </h1>
+
+      <p class="hero-subtitle">
+        Computer Science Engineering undergraduate at <strong>AWH Engineering College, Kuttikattoor</strong>. 
+        Passionate about Python development, Artificial Intelligence, and translating complex ideas into clean, fast, human-friendly web experiences.
+      </p>
+
+      <div class="hero-cta-group">
+        <a href="#projects" class="btn btn-primary">
+          <i class="fa-solid fa-arrow-down"></i> View My Work
+        </a>
+        <a href="#contact" class="btn btn-secondary">
+          <i class="fa-regular fa-envelope"></i> Let's Connect
+        </a>
+        <a href="https://github.com/hilnamanoharan2008-cmyk" target="_blank" rel="noopener noreferrer" class="btn btn-ghost" title="GitHub Profile">
+          <i class="fa-brands fa-github"></i>
+        </a>
+        <a href="https://www.linkedin.com/in/hilna-o" target="_blank" rel="noopener noreferrer" class="btn btn-ghost" title="LinkedIn Profile">
+          <i class="fa-brands fa-linkedin-in"></i>
+        </a>
+      </div>
+    </section>
+
+    <!-- BENTO GRID SHOWCASE -->
+    <section class="bento-container" id="about">
+
+      <!-- Bento Item 1: About Me (Wide) -->
+      <article class="bento-card bento-about col-span-2">
+        <div class="card-glow"></div>
+        <div class="card-header">
+          <div class="icon-bubble">
+            <i class="fa-solid fa-user-graduate"></i>
+          </div>
+          <span class="card-tag">About Me</span>
+        </div>
+        <div class="card-content">
+          <h3>Computer Science Undergraduate & Tech Enthusiast</h3>
+          <p>
+            Currently pursuing my <strong>1st Year B.Tech in Computer Science & Engineering</strong> at 
+            <strong>AWH Engineering College, Kuttikattoor</strong>. I focus on building strong computational 
+            problem-solving foundations through Python, exploring Artificial Intelligence & Machine Learning, 
+            and designing modern, clean user interfaces with an eye for Bento-grid layouts.
+          </p>
+          <div class="about-highlights">
+            <div class="highlight-item">
+              <i class="fa-solid fa-building-columns"></i>
+              <div>
+                <strong>AWH Engineering College</strong>
+                <span>Kuttikattoor, Kozhikode</span>
+              </div>
+            </div>
+            <div class="highlight-item">
+              <i class="fa-solid fa-code"></i>
+              <div>
+                <strong>1st Year B.Tech CSE</strong>
+                <span>Algorithms, Python & Web</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <!-- Bento Item 2: Quick Contact Snapshot -->
+      <article class="bento-card bento-quick-contact">
+        <div class="card-glow"></div>
+        <div class="card-header">
+          <div class="icon-bubble">
+            <i class="fa-solid fa-paper-plane"></i>
+          </div>
+          <span class="card-tag">Quick Ping</span>
+        </div>
+        <div class="card-content">
+          <h3>Let's Collaborate</h3>
+          <p>Have an idea or looking for an enthusiastic engineering intern?</p>
+          <div class="quick-contact-actions">
+            <button class="btn btn-primary full-width copy-email-btn" data-email="hilnamanoharan2008@gmail.com">
+              <i class="fa-regular fa-copy"></i>
+              <span>Copy Email</span>
+            </button>
+            <a href="mailto:hilnamanoharan2008@gmail.com" class="btn btn-outline full-width">
+              <i class="fa-solid fa-arrow-up-right-from-square"></i> Send Email Direct
+            </a>
+          </div>
+        </div>
+      </article>
+
+      <!-- Bento Item 3: Skills Matrix (Wide) -->
+      <article class="bento-card bento-skills col-span-3" id="skills">
+        <div class="card-glow"></div>
+        <div class="card-header">
+          <div class="icon-bubble">
+            <i class="fa-solid fa-layer-group"></i>
+          </div>
+          <span class="card-tag">Skills & Toolbox</span>
+        </div>
+        <div class="card-content">
+          <div class="skills-grid">
+            <!-- Programming & AI -->
+            <div class="skill-category">
+              <h4 class="category-title"><i class="fa-brands fa-python text-amber"></i> Core Code & Intelligence</h4>
+              <div class="skills-tags">
+                <span class="skill-pill active-pill"><i class="fa-brands fa-python"></i> Python Programming</span>
+                <span class="skill-pill"><i class="fa-solid fa-brain"></i> AI / ML Fundamentals</span>
+                <span class="skill-pill"><i class="fa-solid fa-calculator"></i> Data Structures & Logic</span>
+              </div>
+            </div>
+
+            <!-- Frontend & Design -->
+            <div class="skill-category">
+              <h4 class="category-title"><i class="fa-solid fa-bezier-curve text-indigo"></i> UI/UX & Web</h4>
+              <div class="skills-tags">
+                <span class="skill-pill"><i class="fa-brands fa-html5"></i> HTML5 Semantic Web</span>
+                <span class="skill-pill"><i class="fa-brands fa-css3-alt"></i> Modern CSS3 & Flex/Grid</span>
+                <span class="skill-pill active-pill"><i class="fa-solid fa-table-cells-large"></i> Bento-Grid Layouts</span>
+                <span class="skill-pill"><i class="fa-solid fa-wand-magic-sparkles"></i> Responsive UI Design</span>
+              </div>
+            </div>
+
+            <!-- Tools & Creative Development -->
+            <div class="skill-category">
+              <h4 class="category-title"><i class="fa-solid fa-screwdriver-wrench text-emerald"></i> Workflow & Creative</h4>
+              <div class="skills-tags">
+                <span class="skill-pill"><i class="fa-brands fa-git-alt"></i> Git Version Control</span>
+                <span class="skill-pill"><i class="fa-brands fa-github"></i> GitHub Repositories</span>
+                <span class="skill-pill active-pill"><i class="fa-solid fa-gamepad"></i> Scratch Game Development</span>
+                <span class="skill-pill"><i class="fa-solid fa-terminal"></i> Command Line & Debugging</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <!-- Bento Item 4: Scratch & Creative Coding Spotlight -->
+      <article class="bento-card bento-creative">
+        <div class="card-glow"></div>
+        <div class="card-header">
+          <div class="icon-bubble">
+            <i class="fa-solid fa-gamepad"></i>
+          </div>
+          <span class="card-tag">Creative Lab</span>
+        </div>
+        <div class="card-content">
+          <h3>Scratch & Game Logic</h3>
+          <p>
+            Building games in Scratch sparked my love for computational logic, event handling, loop structures, and state management.
+          </p>
+          <div class="mini-feature-box">
+            <div class="feature-metric">
+              <span class="metric-num">100%</span>
+              <span class="metric-label">Logic-Driven Design</span>
+            </div>
+            <div class="feature-metric">
+              <span class="metric-num">Event</span>
+              <span class="metric-label">Driven Loops</span>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <!-- Bento Item 5: Design Philosophy -->
+      <article class="bento-card bento-philosophy col-span-2">
+        <div class="card-glow"></div>
+        <div class="card-header">
+          <div class="icon-bubble">
+            <i class="fa-solid fa-compass-drafting"></i>
+          </div>
+          <span class="card-tag">UI/UX Philosophy</span>
+        </div>
+        <div class="card-content">
+          <h3>Bento Grid & Information Architecture</h3>
+          <p>
+            I believe a user's attention is precious. Inspired by Apple and Linear design systems, 
+            I construct interfaces using asymmetric Bento blocks that prioritize scannability, rapid information delivery, and responsive adaptability.
+          </p>
+          <div class="badge-row">
+            <span class="micro-badge"><i class="fa-solid fa-mobile-screen"></i> Mobile-First</span>
+            <span class="micro-badge"><i class="fa-solid fa-gauge-high"></i> Sub-Second Load</span>
+            <span class="micro-badge"><i class="fa-solid fa-universal-access"></i> High Contrast</span>
+          </div>
+        </div>
+      </article>
+
+    </section>
+
+    <!-- PROJECTS SECTION -->
+    <section class="projects-section" id="projects">
+      <div class="section-header">
+        <div>
+          <span class="section-tag"><i class="fa-solid fa-folder-open"></i> Portfolio</span>
+          <h2 class="section-title">Featured Projects</h2>
+        </div>
+        <p class="section-subtitle">A showcase of software programming, AI explorations, and interface experiments.</p>
+      </div>
+
+      <div class="projects-grid">
+
+        <!-- Project 1: AI / Python -->
+        <div class="project-card">
+          <div class="project-preview preview-ai">
+            <div class="preview-overlay">
+              <span class="project-badge"><i class="fa-brands fa-python"></i> Python & AI/ML</span>
+            </div>
+            <div class="preview-icon">
+              <i class="fa-solid fa-brain"></i>
+            </div>
+          </div>
+          <div class="project-details">
+            <div class="project-meta">
+              <span class="project-type">Machine Learning & Logic</span>
+              <span class="project-date">2026</span>
+            </div>
+            <h3 class="project-title">Smart AI Logic & Pattern Classifier</h3>
+            <p class="project-desc">
+              A Python-based foundational intelligence script exploring decision trees, classification logic, and clean data processing for introductory machine learning concepts.
+            </p>
+            <div class="project-tags">
+              <span>Python 3</span>
+              <span>AI Fundamentals</span>
+              <span>NumPy / Math</span>
+              <span>CLI</span>
+            </div>
+            <div class="project-links">
+              <a href="https://github.com/hilnamanoharan2008-cmyk" target="_blank" rel="noopener noreferrer" class="link-btn">
+                <i class="fa-brands fa-github"></i> Repository
+              </a>
+              <a href="#contact" class="link-btn link-demo">
+                <i class="fa-solid fa-arrow-up-right-from-square"></i> Details
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 2: Bento UI Portfolio -->
+        <div class="project-card">
+          <div class="project-preview preview-ui">
+            <div class="preview-overlay">
+              <span class="project-badge"><i class="fa-solid fa-table-cells-large"></i> Bento UI</span>
+            </div>
+            <div class="preview-icon">
+              <i class="fa-solid fa-palette"></i>
+            </div>
+          </div>
+          <div class="project-details">
+            <div class="project-meta">
+              <span class="project-type">Frontend Engineering</span>
+              <span class="project-date">2026</span>
+            </div>
+            <h3 class="project-title">Bento-Grid Personal Portfolio Hub</h3>
+            <p class="project-desc">
+              A high-performance personal developer showcase built with semantic HTML5, modern CSS Grid/Flexbox, and accessible design principles with an integrated 30s recruiter mode.
+            </p>
+            <div class="project-tags">
+              <span>HTML5</span>
+              <span>Modern CSS3</span>
+              <span>Vanilla JS</span>
+              <span>Responsive</span>
+            </div>
+            <div class="project-links">
+              <a href="https://github.com/hilnamanoharan2008-cmyk" target="_blank" rel="noopener noreferrer" class="link-btn">
+                <i class="fa-brands fa-github"></i> Source Code
+              </a>
+              <a href="#" class="link-btn link-demo">
+                <i class="fa-solid fa-arrow-up-right-from-square"></i> Live Demo
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 3: Scratch Arcade Game -->
+        <div class="project-card">
+          <div class="project-preview preview-game">
+            <div class="preview-overlay">
+              <span class="project-badge"><i class="fa-solid fa-gamepad"></i> Game Dev</span>
+            </div>
+            <div class="preview-icon">
+              <i class="fa-solid fa-ghost"></i>
+            </div>
+          </div>
+          <div class="project-details">
+            <div class="project-meta">
+              <span class="project-type">Interactive Game Design</span>
+              <span class="project-date">2025</span>
+            </div>
+            <h3 class="project-title">Pixel Quest: Scratch Arcade Adventure</h3>
+            <p class="project-desc">
+              An interactive 2D adventure game engineered in Scratch featuring custom character physics, collision detection, enemy pathfinding algorithms, and level progression logic.
+            </p>
+            <div class="project-tags">
+              <span>Scratch 3.0</span>
+              <span>Game Physics</span>
+              <span>State Machines</span>
+              <span>Audio Logic</span>
+            </div>
+            <div class="project-links">
+              <a href="https://github.com/hilnamanoharan2008-cmyk" target="_blank" rel="noopener noreferrer" class="link-btn">
+                <i class="fa-brands fa-github"></i> Scratch Project
+              </a>
+              <a href="#contact" class="link-btn link-demo">
+                <i class="fa-solid fa-gamepad"></i> Play / Demo
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 4: Python Automation Toolkit -->
+        <div class="project-card">
+          <div class="project-preview preview-python">
+            <div class="preview-overlay">
+              <span class="project-badge"><i class="fa-brands fa-python"></i> Python Tool</span>
+            </div>
+            <div class="preview-icon">
+              <i class="fa-solid fa-terminal"></i>
+            </div>
+          </div>
+          <div class="project-details">
+            <div class="project-meta">
+              <span class="project-type">Automation & Utility</span>
+              <span class="project-date">2026</span>
+            </div>
+            <h3 class="project-title">PyAssistant: Student Academic Automation</h3>
+            <p class="project-desc">
+              Lightweight terminal-based utility automating file organization, timetable calculation, and study schedule alerts using Python's standard library and file I/O operations.
+            </p>
+            <div class="project-tags">
+              <span>Python</span>
+              <span>File Automation</span>
+              <span>CLI Interface</span>
+              <span>Git</span>
+            </div>
+            <div class="project-links">
+              <a href="https://github.com/hilnamanoharan2008-cmyk" target="_blank" rel="noopener noreferrer" class="link-btn">
+                <i class="fa-brands fa-github"></i> Repository
+              </a>
+              <a href="#contact" class="link-btn link-demo">
+                <i class="fa-solid fa-arrow-up-right-from-square"></i> Docs
+              </a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- CONTACT SECTION -->
+    <section class="contact-section" id="contact">
+      <div class="contact-card">
+        <div class="card-glow"></div>
+        <div class="contact-content-grid">
+          <div class="contact-left">
+            <span class="section-tag"><i class="fa-regular fa-paper-plane"></i> Get in Touch</span>
+            <h2 class="contact-title">Let's build something remarkable together.</h2>
+            <p class="contact-description">
+              Whether you are a recruiter searching for motivated engineering talent, a fellow developer looking to collaborate, or a mentor willing to share feedback — my inbox is always open.
+            </p>
+
+            <div class="contact-channels">
+              <!-- Email Card -->
+              <div class="channel-card">
+                <div class="channel-icon">
+                  <i class="fa-regular fa-envelope"></i>
+                </div>
+                <div class="channel-info">
+                  <span class="channel-label">Email Me</span>
+                  <a href="mailto:hilnamanoharan2008@gmail.com" class="channel-value">hilnamanoharan2008@gmail.com</a>
+                </div>
+                <button class="copy-icon-btn copy-email-btn" data-email="hilnamanoharan2008@gmail.com" title="Copy email address">
+                  <i class="fa-regular fa-copy"></i>
+                </button>
+              </div>
+
+              <!-- LinkedIn Card -->
+              <div class="channel-card">
+                <div class="channel-icon">
+                  <i class="fa-brands fa-linkedin-in"></i>
+                </div>
+                <div class="channel-info">
+                  <span class="channel-label">LinkedIn</span>
+                  <span class="channel-value">Hilna O</span>
+                </div>
+                <a href="https://www.linkedin.com/in/hilna-o" target="_blank" rel="noopener noreferrer" class="copy-icon-btn" title="Open LinkedIn">
+                  <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                </a>
+              </div>
+
+              <!-- GitHub Card -->
+              <div class="channel-card">
+                <div class="channel-icon">
+                  <i class="fa-brands fa-github"></i>
+                </div>
+                <div class="channel-info">
+                  <span class="channel-label">GitHub</span>
+                  <span class="channel-value">hilnamanoharan2008-cmyk</span>
+                </div>
+                <a href="https://github.com/hilnamanoharan2008-cmyk" target="_blank" rel="noopener noreferrer" class="copy-icon-btn" title="Open GitHub Profile">
+                  <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Interactive Message Prompt -->
+          <div class="contact-right">
+            <div class="interactive-chat-card">
+              <div class="chat-header">
+                <span class="chat-dot red"></span>
+                <span class="chat-dot yellow"></span>
+                <span class="chat-dot green"></span>
+                <span class="chat-title">Quick Message Composer</span>
+              </div>
+              <div class="chat-body">
+                <p class="chat-intro">Draft an email directly to Hilna:</p>
+                <form id="contactForm" onsubmit="handleContactSubmit(event)">
+                  <div class="form-group">
+                    <label for="senderName">Your Name</label>
+                    <input type="text" id="senderName" placeholder="e.g. Alex Johnson (Recruiter / Dev)" required>
+                  </div>
+                  <div class="form-group">
+                    <label for="senderSubject">Subject</label>
+                    <input type="text" id="senderSubject" placeholder="Internship Opportunity / Project Collaboration" required>
+                  </div>
+                  <div class="form-group">
+                    <label for="senderMessage">Message</label>
+                    <textarea id="senderMessage" rows="4" placeholder="Hi Hilna, I came across your portfolio and would like to discuss..." required></textarea>
+                  </div>
+                  <button type="submit" class="btn btn-primary full-width">
+                    <i class="fa-solid fa-paper-plane"></i> Launch Email App
+                  </button>
+                </form>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-brand">
+        <a href="#" class="brand-logo">
+          <span class="logo-symbol">&lt;/&gt;</span>
+          <span class="logo-text">Hilna O<span class="accent-dot">.</span></span>
+        </a>
+        <p class="footer-tagline">1st Year B.Tech CSE • AWH Engineering College, Kuttikattoor</p>
+      </div>
+
+      <div class="footer-links">
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+        <a href="https://github.com/hilnamanoharan2008-cmyk" target="_blank" rel="noopener noreferrer">GitHub</a>
+      </div>
+
+      <div class="footer-bottom">
+        <p>© 2026 Hilna O. Designed with Bento UX principles & pure code. Zero bloat.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Toast Notification Container -->
+  <div id="toastNotification" class="toast-container hidden">
+    <i class="fa-solid fa-circle-check text-emerald"></i>
+    <span id="toastMessage">Email copied to clipboard!</span>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
